@@ -38,12 +38,12 @@ To get started with the .NET 7 User Management Services, follow these steps:
 
 ## Endpoints
 
-   GET /users: Get a list of all users.
-   GET /users/{id}: Get a specific user by ID.
-   POST /users: Create a new user.
-   PUT /users/{id}: Update an existing user.
-   DELETE /users/{id}: Delete a user by ID.
-   For detailed information on request and response formats, refer to the API documentation.
+  - GET /users: Get a list of all users.
+  - GET /users/{id}: Get a specific user by ID.
+  - POST /users: Create a new user.
+  - PUT /users/{id}: Update an existing user.
+  - DELETE /users/{id}: Delete a user by ID.
+  - For detailed information on request and response formats, refer to the API documentation.
    
 ## Authentication
    The .NET 7 User Management Service uses JSON Web Tokens (JWT) for authentication. To access protected endpoints, clients must include a valid JWT token in the Authorization header of the request.
