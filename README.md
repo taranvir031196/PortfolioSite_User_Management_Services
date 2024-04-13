@@ -44,8 +44,8 @@ To get started with the .NET 7 User Management Services, follow these steps:
   - PUT /api/v1/authenticate/updateUser: endpoint for updating a user already added into the system.
   - DELETE /api/v1/authenticate/deleteUser: endpoint for deleting already added user from the system.
    
-    For detailed information on request and response formats, refer to the API documentation.
-   
+**For detailed information on request and response formats, refer to the API documentation.**   
+
 ## Authentication
    The .NET 7 User Management Service uses JSON Web Tokens (JWT) for authentication. To access protected endpoints, clients must include a valid JWT token in the Authorization header of the request.
    
