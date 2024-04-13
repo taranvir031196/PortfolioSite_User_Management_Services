@@ -21,7 +21,7 @@ To get started with the .NET 7 User Management Services, follow these steps:
 
 2. **Install the .NET 7 SDK:**
 
-   Follow the instructions on the .NET website to download and install the [.NET 7](#https://dotnet.microsoft.com/en-us/download) SDK for your platform.
+   Follow the instructions on the .NET website to download and install the [.NET 7](https://dotnet.microsoft.com/en-us/download) SDK for your platform.
 
 3. **Restore dependencies:**
       ```sh
