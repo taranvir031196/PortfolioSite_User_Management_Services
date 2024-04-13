@@ -13,4 +13,4 @@ The User Management Service is a RESTful API built in .Net 7.0 that provides fun
 
 ## Getting Started
 
-To get started with the .NET 7 User Management Service, follow these steps:
+To get started with the .NET 7 User Management Services, follow these steps:
