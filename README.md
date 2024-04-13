@@ -14,3 +14,7 @@ The User Management Service is a RESTful API built in .Net 7.0 that provides fun
 ## Getting Started
 
 To get started with the .NET 7 User Management Services, follow these steps:
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/taranvir031196/PortfolioSite_User_Management_Services
