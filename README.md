@@ -38,12 +38,13 @@ To get started with the .NET 7 User Management Services, follow these steps:
 
 ## Endpoints
 
-  - GET /users: Get a list of all users.
-  - GET /users/{id}: Get a specific user by ID.
-  - POST /users: Create a new user.
-  - PUT /users/{id}: Update an existing user.
-  - DELETE /users/{id}: Delete a user by ID.
-  - For detailed information on request and response formats, refer to the API documentation.
+  - POST /api/v1/authenticate/roles/add: endpoint for adding a role.
+  - POST /api/v1/authenticate/register: endpoint for registering a user on Portfolio platform.
+  - POST /api/v1/authenticate/login: endpoint for logging into the Portfolio application.
+  - PUT /api/v1/authenticate/updateUser: endpoint for updating a user already added into the system.
+  - DELETE /api/v1/authenticate/deleteUser: endpoint for deleting already added user from the system.
+   
+    For detailed information on request and response formats, refer to the API documentation.
    
 ## Authentication
    The .NET 7 User Management Service uses JSON Web Tokens (JWT) for authentication. To access protected endpoints, clients must include a valid JWT token in the Authorization header of the request.
