@@ -21,7 +21,7 @@ var mongoDbIdentityConfig = new MongoDbIdentityConfiguration
 {
     MongoDbSettings = new MongoDbSettings
     {
-        ConnectionString = "mongodb://localhost:27017",
+        ConnectionString = "mongodb+srv://taranvir:Mongo%400311@portfolio-usermanagemen.o7c5hbr.mongodb.net/",
         DatabaseName = "portfolioSiteUserDB"
     },
     IdentityOptionsAction = options =>
