@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Portfolio_Site_UserManagement_Services.Dtos;
@@ -10,6 +11,7 @@ using System.Text;
 
 namespace Portfolio_Site_UserManagement_Services.Controllers
 {
+    [EnableCors("MyPolicy")]
     [ApiController]
     [Route("api/v1/authenticate")]
     public class AuthenticationController : ControllerBase
@@ -24,6 +26,7 @@ namespace Portfolio_Site_UserManagement_Services.Controllers
             _roleManager = roleManager;
         }
 
+        [EnableCors("MyPolicy")]
         [HttpPost]
         [Route("roles/add")]
         public async Task<IActionResult> CreateRole([FromBody] CreateRoleRequest request)
@@ -34,6 +37,7 @@ namespace Portfolio_Site_UserManagement_Services.Controllers
             return Ok(new { message = "role created succesfully" });
         }
 
+        [EnableCors("MyPolicy")]
         [HttpPost]
         [Route("register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequest request)
@@ -75,6 +79,7 @@ namespace Portfolio_Site_UserManagement_Services.Controllers
             }
         }
 
+        [EnableCors("MyPolicy")]
         [HttpPost]
         [Route("login")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(LoginResponse))]
@@ -133,6 +138,8 @@ namespace Portfolio_Site_UserManagement_Services.Controllers
 
             }
         }
+
+        [EnableCors("MyPolicy")]
         [HttpPut]
         [Route("updateUser")]
         public async Task<IActionResult> UpdateUser([FromBody] UpdateRequest request)
@@ -172,6 +179,7 @@ namespace Portfolio_Site_UserManagement_Services.Controllers
             }
         }
 
+        [EnableCors("MyPolicy")]
         [HttpDelete]
         [Route("deleteUser")]
         public async Task<IActionResult> DeleteUser([FromBody] DeleteRequest request)

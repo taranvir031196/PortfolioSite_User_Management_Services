@@ -21,8 +21,10 @@ var mongoDbIdentityConfig = new MongoDbIdentityConfiguration
 {
     MongoDbSettings = new MongoDbSettings
     {
-        ConnectionString = "mongodb+srv://taranvir:Mongo%400311@portfolio-usermanagemen.o7c5hbr.mongodb.net/",
+        ConnectionString = "mongodb://host.docker.internal:27017",
         DatabaseName = "portfolioSiteUserDB"
+        //ConnectionString = "mongodb+srv://taranvir:Mongo%400311@portfolio-usermanagemen.o7c5hbr.mongodb.net/",
+        //DatabaseName = "portfolioSiteUserDB"
     },
     IdentityOptionsAction = options =>
     {
@@ -69,6 +71,15 @@ builder.Services.AddAuthentication(x =>
     };
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyPolicy", builder =>
+    {
+        builder.WithOrigins("http://localhost:8080/", "http://localhost:5001")
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -83,6 +94,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 
