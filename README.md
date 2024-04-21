@@ -38,6 +38,8 @@ To get started with the .NET 7 User Management Services, follow these steps:
 
 ## Endpoints
 
+   Host URL-: https://portfoliosite-user-management-services.onrender.com/
+   
   - POST /api/v1/authenticate/roles/add: endpoint for adding a role.
   - POST /api/v1/authenticate/register: endpoint for registering a user on Portfolio platform.
   - POST /api/v1/authenticate/login: endpoint for logging into the Portfolio application.
